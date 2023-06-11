@@ -21,4 +21,9 @@ class AppColor {
   static const descriptionSubtitleTextColor = Color(0xff838396);
   static const explainContainerColor = Color(0xffF1F1F1);
   static const reviewTextColor = Color(0xff444B51);
+
+  static final detailAppbarBg = [
+    const Color.fromARGB(0, 104, 104, 105).withOpacity(.6),
+    const Color(0xff00000000).withOpacity(.01),
+  ];
 }

@@ -45,19 +45,20 @@ class HomeProductCard extends StatelessWidget {
                             InkWell(
                               onTap: () {
                                 Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => DetailPage(
-                                        imageUrl:
-                                            getProductModel.image.toString(),
-                                        description: getProductModel.description
-                                            .toString(),
-                                        reviewCount:
-                                            getProductModel.rating!.count ?? 0,
-                                        rate: getProductModel.rating!.rate ?? 0,
-                                        count: getProductModel.price ?? 0,
-                                      ),
-                                    ));
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => DetailPage(
+                                      imageUrl:
+                                          getProductModel.image.toString(),
+                                      description: getProductModel.description
+                                          .toString(),
+                                      reviewCount:
+                                          getProductModel.rating!.count ?? 0,
+                                      rate: getProductModel.rating!.rate ?? 0,
+                                      count: getProductModel.price ?? 0,
+                                    ),
+                                  ),
+                                );
                               },
                               child: Stack(
                                 children: [

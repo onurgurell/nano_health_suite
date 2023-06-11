@@ -9,42 +9,40 @@ class IconsAndDetailText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      top: 50.h,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 12.w),
-            width: context.getDynmaicWidth(1),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                BaseIcon(
-                  onTap: () => Navigator.pop(context),
-                  icon: Icons.arrow_back,
-                ),
-                BaseIcon(
-                  onTap: () {},
-                  icon: Icons.more_vert,
-                ),
-              ],
-            ),
-          ),
-          20.h.verticalSpace,
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 12.w),
-            child: Text(
-              AppStrings.detailText,
-              style: TextStyle(
-                fontSize: 28.sp,
-                color: Colors.white,
-                fontWeight: FontWeight.w700,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        60.h.verticalSpace,
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 12.w),
+          width: context.getDynmaicWidth(1),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              BaseIcon(
+                onTap: () => Navigator.pop(context),
+                icon: Icons.arrow_back,
               ),
+              BaseIcon(
+                onTap: () {},
+                icon: Icons.more_vert,
+              ),
+            ],
+          ),
+        ),
+        20.h.verticalSpace,
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 12.w),
+          child: Text(
+            AppStrings.detailText,
+            style: TextStyle(
+              fontSize: 28.sp,
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

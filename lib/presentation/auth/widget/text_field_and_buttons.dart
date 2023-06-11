@@ -6,9 +6,9 @@ import 'package:nano_health_suite/core/const/app_color/app_color.dart';
 import 'package:nano_health_suite/core/const/app_image/app_image_path.dart';
 import 'package:nano_health_suite/core/const/app_strings/app_strings.dart';
 import 'package:nano_health_suite/core/extension/context_extension.dart';
+import 'package:nano_health_suite/core/router/routes.dart';
 import 'package:nano_health_suite/injection.dart';
 import 'package:nano_health_suite/presentation/auth/widget/custom_text_field.dart';
-import 'package:nano_health_suite/presentation/home/home_page.dart';
 
 class TextFieldsAndButtons extends StatelessWidget {
   const TextFieldsAndButtons({
@@ -51,11 +51,8 @@ class TextFieldsAndButtons extends StatelessWidget {
                 24.h.verticalSpace,
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomePage(),
-                        ));
+                    Navigator.pushNamedAndRemoveUntil(context, Routes.homePage,
+                        (Route<dynamic> route) => false);
                   },
                   child: Container(
                     width: context.getDynmaicWidth(.9),

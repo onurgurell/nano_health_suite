@@ -19,7 +19,7 @@ class RouterManager {
         );
       case Routes.homePage:
         return MaterialPageRoute(
-          builder: (context) => BlocProvider(
+          builder: (_) => BlocProvider(
             create: (context) => getIt<HomeBloc>()..fetchEvent(),
             child: const HomePage(),
           ),

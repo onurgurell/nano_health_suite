@@ -2,11 +2,13 @@
 
 Screens
 
-![Simulator Screen Shot - iPhone 14 Pro - 2023-06-11 at 22 24 24](https://github.com/onurgurell/nano_health_suite/assets/69406005/878e6f38-f6aa-4925-8f79-a55caa4ba5a9)
-![Simulator Screen Shot - iPhone 14 Pro - 2023-06-11 at 22 24 29](https://github.com/onurgurell/nano_health_suite/assets/69406005/217e7aea-7e13-49ae-a232-8cf18c31ad3a)
-![Simulator Screen Shot - iPhone 14 Pro - 2023-06-11 at 22 24 33](https://github.com/onurgurell/nano_health_suite/assets/69406005/8e1e7e31-27d9-495b-8e7f-f1142bd6eaee)
-![Simulator Screen Shot - iPhone 14 Pro - 2023-06-11 at 22 24 39](https://github.com/onurgurell/nano_health_suite/assets/69406005/c64cf16d-b406-462c-aba3-61178b27eec9)
+<img width="364" alt="Screen Shot 2023-06-11 at 22 28 26" src="https://github.com/onurgurell/nano_health_suite/assets/69406005/6daf84cb-0afe-4628-97f7-6e83fcbfc470">
 
+<img width="364" alt="Screen Shot 2023-06-11 at 22 28 33" src="https://github.com/onurgurell/nano_health_suite/assets/69406005/2ffa4bbf-b7c1-4245-b398-6893670ccaaf">
+
+<img width="364" alt="Screen Shot 2023-06-11 at 22 28 38" src="https://github.com/onurgurell/nano_health_suite/assets/69406005/2aad62fe-fa2f-43d2-bde7-2369eaec3df3">
+
+<img width="364" alt="Screen Shot 2023-06-11 at 22 28 45" src="https://github.com/onurgurell/nano_health_suite/assets/69406005/c2c9c828-8363-4484-b3ff-6ab1d8e69913">
 
 Clean Architeture
 

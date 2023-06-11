@@ -17,4 +17,8 @@ class AppColor {
   //detail
   static const detailDefaultIconColor = Color(0xff08293B);
   static const detailUploadIconColor = Color(0xff2AB3C6);
+  static const descriptionTextColor = Color(0xff444B51);
+  static const descriptionSubtitleTextColor = Color(0xff838396);
+  static const explainContainerColor = Color(0xffF1F1F1);
+  static const reviewTextColor = Color(0xff444B51);
 }

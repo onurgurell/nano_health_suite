@@ -12,4 +12,6 @@ class AppStrings {
   //detail
   static const detailText = "Detail";
   static const orderNowText = "Order Now";
+  static const descriptionText = "Description";
+  static const reviewText = "Reviews";
 }

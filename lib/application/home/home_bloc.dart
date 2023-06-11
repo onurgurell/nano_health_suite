@@ -1,6 +1,6 @@
-import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nano_health_suite/core/error/failure.dart';
 import 'package:nano_health_suite/infrastructure/model/product/product_model.dart';
 import 'package:nano_health_suite/infrastructure/repo/product/i_product_repository.dart';

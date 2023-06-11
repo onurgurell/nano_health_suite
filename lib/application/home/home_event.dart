@@ -6,3 +6,8 @@ class HomeGetProductEvent extends HomeEvent {
   @override
   List<Object?> get props => [];
 }
+
+class DetailChangeSizeEvent extends HomeEvent {
+  @override
+  List<Object?> get props => [];
+}

@@ -13,6 +13,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<HomeGetProductEvent>(
       _onGetProductEvent,
     );
+    on<DetailChangeSizeEvent>(
+      _onChangeContainerSize,
+    );
   }
 
   final IProductRepository _iProductRepository;
@@ -21,14 +24,18 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     add(HomeGetProductEvent());
   }
 
+  void _onChangeContainerSize(
+      DetailChangeSizeEvent event, Emitter<HomeState> emit) {
+    emit(
+      state.copyWith(isUpOrDownContainer: !state.isUpOrDownContainer),
+    );
+  }
+
   Future<void> _onGetProductEvent(
       HomeGetProductEvent event, Emitter<HomeState> emit) async {
     final failureOrProduct = await _iProductRepository.getProduct();
-    print("aaaa $failureOrProduct");
     final newState = state.failureOrProductOption.fold(
       () {
-        print("state $state");
-
         return state.copyWith(failureOrProductOption: some(failureOrProduct));
       },
       (failureOrGetProduct) {

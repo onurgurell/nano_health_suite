@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nano_health_suite/application/home/home_bloc.dart';
 import 'package:nano_health_suite/core/const/app_color/app_color.dart';
-import 'package:nano_health_suite/core/const/app_image/app_image_path.dart';
 import 'package:nano_health_suite/core/extension/context_extension.dart';
-import 'package:nano_health_suite/core/router/routes.dart';
+import 'package:nano_health_suite/presentation/detail/detail_page.dart';
+import 'package:nano_health_suite/ui_kit/star_rating_bar.dart';
 
 class HomeProductCard extends StatelessWidget {
   const HomeProductCard({
@@ -44,7 +44,20 @@ class HomeProductCard extends StatelessWidget {
                           children: [
                             InkWell(
                               onTap: () {
-                                Navigator.pushNamed(context, Routes.detailPage);
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => DetailPage(
+                                        imageUrl:
+                                            getProductModel.image.toString(),
+                                        description: getProductModel.description
+                                            .toString(),
+                                        reviewCount:
+                                            getProductModel.rating!.count ?? 0,
+                                        rate: getProductModel.rating!.rate ?? 0,
+                                        count: getProductModel.price ?? 0,
+                                      ),
+                                    ));
                               },
                               child: Stack(
                                 children: [
@@ -60,7 +73,7 @@ class HomeProductCard extends StatelessWidget {
                                     ),
                                   ),
                                   Positioned(
-                                    bottom: 10,
+                                    bottom: 5,
                                     left: 10.w,
                                     child: SizedBox(
                                       width: context.getDynmaicWidth(.4),
@@ -78,19 +91,10 @@ class HomeProductCard extends StatelessWidget {
                                   Positioned(
                                     bottom: 13.h,
                                     right: 10.w,
-                                    child: SizedBox(
-                                      width: context.getDynmaicWidth(.35),
-                                      height: 30.h,
-                                      child: ListView.builder(
-                                        scrollDirection: Axis.horizontal,
-                                        itemCount: 5,
-                                        itemBuilder: (context, index) {
-                                          return Image.asset(
-                                            AppImagePath.starImage,
-                                          );
-                                        },
-                                      ),
-                                    ),
+                                    child: StarRatingBar(
+                                        itemSize: 22.sp,
+                                        rate:
+                                            getProductModel.rating?.rate ?? 0),
                                   ),
                                 ],
                               ),

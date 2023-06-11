@@ -5,7 +5,6 @@ import 'package:nano_health_suite/application/home/home_bloc.dart';
 import 'package:nano_health_suite/core/router/routes.dart';
 import 'package:nano_health_suite/injection.dart';
 import 'package:nano_health_suite/presentation/auth/auth_page.dart';
-import 'package:nano_health_suite/presentation/detail/detail_page.dart';
 import 'package:nano_health_suite/presentation/home/home_page.dart';
 
 class RouterManager {
@@ -25,10 +24,10 @@ class RouterManager {
             child: const HomePage(),
           ),
         );
-      case Routes.detailPage:
-        return MaterialPageRoute(
-          builder: (context) => const DetailPage(),
-        );
+      // case Routes.detailPage:
+      //   return MaterialPageRoute(
+      //     builder: (context) => const DetailPage(),
+      //   );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

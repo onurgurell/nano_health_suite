@@ -3,14 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nano_health_suite/application/home/home_bloc.dart';
 import 'package:nano_health_suite/core/const/app_color/app_color.dart';
-import 'package:nano_health_suite/core/const/app_image/app_image_path.dart';
-import 'package:nano_health_suite/core/const/app_strings/app_strings.dart';
 import 'package:nano_health_suite/core/extension/context_extension.dart';
-import 'package:nano_health_suite/presentation/detail/widget/base_icon.dart';
 import 'package:nano_health_suite/presentation/detail/widget/detail_bottom_card.dart';
-import 'package:nano_health_suite/presentation/detail/widget/detail_card_description.dart';
 import 'package:nano_health_suite/presentation/detail/widget/icon_and_detail_text.dart';
-import 'package:nano_health_suite/ui_kit/star_rating_bar.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({

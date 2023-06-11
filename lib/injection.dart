@@ -23,9 +23,7 @@ Future<bool> _injectFacades() async {
 
 Future<bool> _injectBlocs() async {
   getIt.registerFactory<AuthBloc>(() => AuthBloc());
-  getIt.registerFactory<HomeBloc>(() => HomeBloc(
-        getIt<IProductRepository>(),
-      ));
+  getIt.registerFactory<HomeBloc>(() => HomeBloc(getIt<IProductRepository>()));
 
   return true;
 }

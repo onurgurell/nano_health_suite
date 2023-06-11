@@ -13,13 +13,10 @@ class ProductRepository extends IProductRepository {
       const url = "https://fakestoreapi.com/products/1";
 
       final response = await http.get(Uri.parse(url));
-      print(response.statusCode);
 
       if (response.statusCode == 200) {
         final jsonData = jsonDecode(response.body);
-        print("jsonData $jsonData");
         final product = SomeRootEntity.fromJson(jsonData);
-        print("product $product");
 
         return right(product);
       } else {
